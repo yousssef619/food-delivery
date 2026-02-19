@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="FoodRush – Order delicious food from top restaurants near you. Fast delivery, fresh food, great prices." />
+  <title>FoodRush – Fast Food Delivery</title>
+
+  <!-- Google Fonts: Clash Display + Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="container navbar__inner">
+
+      <!-- Logo -->
+      <a href="#" class="navbar__logo" aria-label="FoodRush Home">
+        <span class="navbar__logo-icon" aria-hidden="true">🍕</span>
+        <span class="navbar__logo-text">Food<span class="navbar__logo-accent">Rush</span></span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="navbar__nav" role="navigation" aria-label="Main navigation">
+        <ul class="navbar__list">
+          <li><a class="navbar__link navbar__link--active" href="#hero">Home</a></li>
+          <li><a class="navbar__link" href="#categories">Menu</a></li>
+          <li><a class="navbar__link" href="#popular">Popular</a></li>
+          <li><a class="navbar__link" href="#how-it-works">How it Works</a></li>
+          <li><a class="navbar__link" href="#testimonials">Reviews</a></li>
+        </ul>
+      </nav>
+
+      <!-- CTA + Cart -->
+      <div class="navbar__actions">
+        <button class="btn btn--ghost" aria-label="Sign in">Sign In</button>
+        <button class="btn btn--primary" aria-label="Sign up">Sign Up</button>
+        <button class="navbar__cart" id="cartBtn" aria-label="Open cart (0 items)">
+          <span class="navbar__cart-icon" aria-hidden="true">🛒</span>
+          <span class="navbar__cart-badge" id="cartBadge">0</span>
+        </button>
+      </div>
+
+      <!-- Hamburger -->
+      <button class="navbar__hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="navbar__hamburger-bar"></span>
+        <span class="navbar__hamburger-bar"></span>
+        <span class="navbar__hamburger-bar"></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+      <nav>
+        <ul class="mobile-menu__list">
+          <li><a class="mobile-menu__link" href="#hero">Home</a></li>
+          <li><a class="mobile-menu__link" href="#categories">Menu</a></li>
+          <li><a class="mobile-menu__link" href="#popular">Popular</a></li>
+          <li><a class="mobile-menu__link" href="#how-it-works">How it Works</a></li>
+          <li><a class="mobile-menu__link" href="#testimonials">Reviews</a></li>
+        </ul>
+        <div class="mobile-menu__actions">
+          <button class="btn btn--ghost btn--full">Sign In</button>
+          <button class="btn btn--primary btn--full">Sign Up</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero" aria-label="Hero section">
+      <div class="container hero__inner">
+
+        <div class="hero__content">
+          <div class="hero__badge fade-in">
+            <span class="hero__badge-dot" aria-hidden="true"></span>
+            Free delivery on your first order 🎉
+          </div>
+          <h1 class="hero__title fade-in fade-in--delay-1">
+            Order Food<br />
+            <span class="hero__title-accent">Delivered Fast</span><br />
+            To Your Door
+          </h1>
+          <p class="hero__subtitle fade-in fade-in--delay-2">
+            Discover the best restaurants near you. Fresh meals, lightning-fast delivery, and unbeatable flavors — all in one tap.
+          </p>
+
+          <!-- Search Bar -->
+          <div class="hero__search fade-in fade-in--delay-3">
+            <div class="search-bar">
+              <span class="search-bar__icon" aria-hidden="true">📍</span>
+              <input class="search-bar__input" type="text" placeholder="Enter your delivery address..." aria-label="Delivery address" />
+              <button class="btn btn--primary search-bar__btn">Find Food</button>
+            </div>
+          </div>
+
+          <!-- Stats -->
+          <div class="hero__stats fade-in fade-in--delay-4">
+            <div class="hero__stat">
+              <strong class="hero__stat-number">500+</strong>
+              <span class="hero__stat-label">Restaurants</span>
+            </div>
+            <div class="hero__stat-divider" aria-hidden="true"></div>
+            <div class="hero__stat">
+              <strong class="hero__stat-number">50K+</strong>
+              <span class="hero__stat-label">Happy Customers</span>
+            </div>
+            <div class="hero__stat-divider" aria-hidden="true"></div>
+            <div class="hero__stat">
+              <strong class="hero__stat-number">4.9★</strong>
+              <span class="hero__stat-label">Average Rating</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual -->
+        <div class="hero__visual fade-in fade-in--delay-2">
+          <div class="hero__blob" aria-hidden="true"></div>
+          <div class="hero__food-img" aria-hidden="true">
+            <div class="hero__plate">
+              <div class="hero__plate-food">🍔</div>
+            </div>
+          </div>
+
+          <!-- Floating Cards -->
+          <div class="float-card float-card--delivery" aria-hidden="true">
+            <span class="float-card__icon">🛵</span>
+            <div class="float-card__info">
+              <strong>Fast Delivery</strong>
+              <span>25–35 min</span>
+            </div>
+          </div>
+
+          <div class="float-card float-card--order" aria-hidden="true">
+            <span class="float-card__icon">✅</span>
+            <div class="float-card__info">
+              <strong>Order Confirmed!</strong>
+              <span>Preparing your food</span>
+            </div>
+          </div>
+
+          <div class="float-card float-card--rating" aria-hidden="true">
+            <span class="float-card__icon">⭐</span>
+            <div class="float-card__info">
+              <strong>4.9 / 5.0</strong>
+              <span>12K+ reviews</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Wave Separator -->
+      <div class="hero__wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#fff"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ===================== PARTNER LOGOS ===================== -->
+    <section class="partners" aria-label="Partner restaurants">
+      <div class="container">
+        <p class="partners__label">Trusted by top restaurants</p>
+        <div class="partners__track-wrapper">
+          <div class="partners__track" aria-hidden="true">
+            <span class="partners__logo">🍕 PizzaPalace</span>
+            <span class="partners__logo">🍣 SushiWorld</span>
+            <span class="partners__logo">🍔 BurgerKing</span>
+            <span class="partners__logo">🥗 GreenBowl</span>
+            <span class="partners__logo">🌮 TacoFiesta</span>
+            <span class="partners__logo">🍜 NoodleHouse</span>
+            <span class="partners__logo">🍕 PizzaPalace</span>
+            <span class="partners__logo">🍣 SushiWorld</span>
+            <span class="partners__logo">🍔 BurgerKing</span>
+            <span class="partners__logo">🥗 GreenBowl</span>
+            <span class="partners__logo">🌮 TacoFiesta</span>
+            <span class="partners__logo">🍜 NoodleHouse</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CATEGORIES ===================== -->
+    <section class="categories section" id="categories" aria-label="Food categories">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Browse Menu</span>
+          <h2 class="section-title">What Are You<br /><span class="accent">Craving Today?</span></h2>
+          <p class="section-desc">Explore a wide variety of cuisines from your favorite local restaurants.</p>
+        </div>
+
+        <div class="categories__grid reveal">
+          <button class="category-card category-card--active" data-category="all" aria-pressed="true">
+            <span class="category-card__emoji" aria-hidden="true">🍽️</span>
+            <span class="category-card__name">All</span>
+          </button>
+          <button class="category-card" data-category="pizza" aria-pressed="false">
+            <span class="category-card__emoji" aria-hidden="true">🍕</span>
+            <span class="category-card__name">Pizza</span>
+          </button>
+          <button class="category-card" data-category="burger" aria-pressed="false">
+            <span class="category-card__emoji" aria-hidden="true">🍔</span>
+            <span class="category-card__name">Burger</span>
+          </button>
+          <button class="category-card" data-category="sushi" aria-pressed="false">
+            <span class="category-card__emoji" aria-hidden="true">🍣</span>
+            <span class="category-card__name">Sushi</span>
+          </button>
+          <button class="category-card" data-category="salad" aria-pressed="false">
+            <span class="category-card__emoji" aria-hidden="true">🥗</span>
+            <span class="category-card__name">Salad</span>
+          </button>
+          <button class="category-card" data-category="taco" aria-pressed="false">
+            <span class="category-card__emoji" aria-hidden="true">🌮</span>
+            <span class="category-card__name">Tacos</span>
+          </button>
+          <button class="category-card" data-category="noodle" aria-pressed="false">
+            <span class="category-card__emoji" aria-hidden="true">🍜</span>
+            <span class="category-card__name">Noodles</span>
+          </button>
+          <button class="category-card" data-category="dessert" aria-pressed="false">
+            <span class="category-card__emoji" aria-hidden="true">🍰</span>
+            <span class="category-card__name">Desserts</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== POPULAR DISHES ===================== -->
+    <section class="popular section" id="popular" aria-label="Popular dishes">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Most Loved</span>
+          <h2 class="section-title">Popular <span class="accent">Dishes</span></h2>
+          <p class="section-desc">Handpicked favorites ordered by thousands of happy customers every day.</p>
+        </div>
+
+        <div class="popular__grid" id="dishesGrid">
+
+          <!-- Dish Card -->
+          <article class="dish-card reveal" data-category="burger" aria-label="Classic Cheeseburger">
+            <div class="dish-card__img-wrapper">
+              <div class="dish-card__img" aria-hidden="true">🍔</div>
+              <span class="dish-card__badge">Bestseller</span>
+              <button class="dish-card__fav" aria-label="Add Classic Cheeseburger to favourites">♡</button>
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__meta">
+                <span class="dish-card__category">Burger</span>
+                <span class="dish-card__rating">⭐ 4.8</span>
+              </div>
+              <h3 class="dish-card__name">Classic Cheeseburger</h3>
+              <p class="dish-card__desc">Juicy beef patty, melted cheddar, fresh lettuce and tomato on a toasted brioche bun.</p>
+              <div class="dish-card__footer">
+                <div class="dish-card__price-group">
+                  <span class="dish-card__price">$12.99</span>
+                  <span class="dish-card__old-price">$15.99</span>
+                </div>
+                <button class="btn btn--primary btn--sm add-to-cart" data-id="1" data-name="Classic Cheeseburger" data-price="12.99" aria-label="Add Classic Cheeseburger to cart">
+                  + Add
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="dish-card reveal" data-category="pizza" aria-label="Margherita Pizza">
+            <div class="dish-card__img-wrapper">
+              <div class="dish-card__img" aria-hidden="true">🍕</div>
+              <button class="dish-card__fav" aria-label="Add Margherita Pizza to favourites">♡</button>
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__meta">
+                <span class="dish-card__category">Pizza</span>
+                <span class="dish-card__rating">⭐ 4.9</span>
+              </div>
+              <h3 class="dish-card__name">Margherita Pizza</h3>
+              <p class="dish-card__desc">Classic wood-fired pizza with San Marzano tomato sauce, fresh mozzarella and basil.</p>
+              <div class="dish-card__footer">
+                <div class="dish-card__price-group">
+                  <span class="dish-card__price">$14.99</span>
+                </div>
+                <button class="btn btn--primary btn--sm add-to-cart" data-id="2" data-name="Margherita Pizza" data-price="14.99" aria-label="Add Margherita Pizza to cart">
+                  + Add
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="dish-card reveal" data-category="sushi" aria-label="Salmon Roll">
+            <div class="dish-card__img-wrapper">
+              <div class="dish-card__img" aria-hidden="true">🍣</div>
+              <span class="dish-card__badge dish-card__badge--new">New</span>
+              <button class="dish-card__fav" aria-label="Add Salmon Roll to favourites">♡</button>
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__meta">
+                <span class="dish-card__category">Sushi</span>
+                <span class="dish-card__rating">⭐ 4.7</span>
+              </div>
+              <h3 class="dish-card__name">Premium Salmon Roll</h3>
+              <p class="dish-card__desc">Fresh Atlantic salmon, cucumber, avocado and cream cheese wrapped in seasoned sushi rice.</p>
+              <div class="dish-card__footer">
+                <div class="dish-card__price-group">
+                  <span class="dish-card__price">$18.99</span>
+                </div>
+                <button class="btn btn--primary btn--sm add-to-cart" data-id="3" data-name="Premium Salmon Roll" data-price="18.99" aria-label="Add Salmon Roll to cart">
+                  + Add
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="dish-card reveal" data-category="salad" aria-label="Caesar Salad">
+            <div class="dish-card__img-wrapper">
+              <div class="dish-card__img" aria-hidden="true">🥗</div>
+              <button class="dish-card__fav" aria-label="Add Caesar Salad to favourites">♡</button>
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__meta">
+                <span class="dish-card__category">Salad</span>
+                <span class="dish-card__rating">⭐ 4.6</span>
+              </div>
+              <h3 class="dish-card__name">Grilled Chicken Caesar</h3>
+              <p class="dish-card__desc">Crisp romaine, house-made Caesar dressing, parmesan shavings and house-baked croutons.</p>
+              <div class="dish-card__footer">
+                <div class="dish-card__price-group">
+                  <span class="dish-card__price">$11.99</span>
+                  <span class="dish-card__old-price">$13.99</span>
+                </div>
+                <button class="btn btn--primary btn--sm add-to-cart" data-id="4" data-name="Grilled Chicken Caesar" data-price="11.99" aria-label="Add Caesar Salad to cart">
+                  + Add
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="dish-card reveal" data-category="taco" aria-label="Street Tacos">
+            <div class="dish-card__img-wrapper">
+              <div class="dish-card__img" aria-hidden="true">🌮</div>
+              <span class="dish-card__badge">Spicy 🌶</span>
+              <button class="dish-card__fav" aria-label="Add Street Tacos to favourites">♡</button>
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__meta">
+                <span class="dish-card__category">Tacos</span>
+                <span class="dish-card__rating">⭐ 4.9</span>
+              </div>
+              <h3 class="dish-card__name">Loaded Street Tacos</h3>
+              <p class="dish-card__desc">3 soft corn tortillas packed with carne asada, pico de gallo, guacamole and lime crema.</p>
+              <div class="dish-card__footer">
+                <div class="dish-card__price-group">
+                  <span class="dish-card__price">$13.49</span>
+                </div>
+                <button class="btn btn--primary btn--sm add-to-cart" data-id="5" data-name="Loaded Street Tacos" data-price="13.49" aria-label="Add Street Tacos to cart">
+                  + Add
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="dish-card reveal" data-category="noodle" aria-label="Ramen Bowl">
+            <div class="dish-card__img-wrapper">
+              <div class="dish-card__img" aria-hidden="true">🍜</div>
+              <span class="dish-card__badge dish-card__badge--new">New</span>
+              <button class="dish-card__fav" aria-label="Add Ramen Bowl to favourites">♡</button>
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__meta">
+                <span class="dish-card__category">Noodles</span>
+                <span class="dish-card__rating">⭐ 4.8</span>
+              </div>
+              <h3 class="dish-card__name">Tonkotsu Ramen Bowl</h3>
+              <p class="dish-card__desc">Rich pork-bone broth, springy noodles, soft-boiled egg, chashu pork and nori.</p>
+              <div class="dish-card__footer">
+                <div class="dish-card__price-group">
+                  <span class="dish-card__price">$16.99</span>
+                </div>
+                <button class="btn btn--primary btn--sm add-to-cart" data-id="6" data-name="Tonkotsu Ramen Bowl" data-price="16.99" aria-label="Add Ramen Bowl to cart">
+                  + Add
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="dish-card reveal" data-category="dessert" aria-label="Chocolate Lava Cake">
+            <div class="dish-card__img-wrapper">
+              <div class="dish-card__img" aria-hidden="true">🍰</div>
+              <button class="dish-card__fav" aria-label="Add Chocolate Lava Cake to favourites">♡</button>
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__meta">
+                <span class="dish-card__category">Dessert</span>
+                <span class="dish-card__rating">⭐ 5.0</span>
+              </div>
+              <h3 class="dish-card__name">Chocolate Lava Cake</h3>
+              <p class="dish-card__desc">Warm chocolate cake with a molten fudge center, served with vanilla bean ice cream.</p>
+              <div class="dish-card__footer">
+                <div class="dish-card__price-group">
+                  <span class="dish-card__price">$8.99</span>
+                  <span class="dish-card__old-price">$10.99</span>
+                </div>
+                <button class="btn btn--primary btn--sm add-to-cart" data-id="7" data-name="Chocolate Lava Cake" data-price="8.99" aria-label="Add Chocolate Lava Cake to cart">
+                  + Add
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="dish-card reveal" data-category="burger" aria-label="Veggie Burger">
+            <div class="dish-card__img-wrapper">
+              <div class="dish-card__img" aria-hidden="true">🥙</div>
+              <button class="dish-card__fav" aria-label="Add Veggie Wrap to favourites">♡</button>
+            </div>
+            <div class="dish-card__body">
+              <div class="dish-card__meta">
+                <span class="dish-card__category">Burger</span>
+                <span class="dish-card__rating">⭐ 4.5</span>
+              </div>
+              <h3 class="dish-card__name">Crispy Veggie Wrap</h3>
+              <p class="dish-card__desc">Crispy falafel, roasted veggies, hummus, feta and tzatziki in a warm whole-wheat wrap.</p>
+              <div class="dish-card__footer">
+                <div class="dish-card__price-group">
+                  <span class="dish-card__price">$10.99</span>
+                </div>
+                <button class="btn btn--primary btn--sm add-to-cart" data-id="8" data-name="Crispy Veggie Wrap" data-price="10.99" aria-label="Add Veggie Wrap to cart">
+                  + Add
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="popular__more reveal">
+          <button class="btn btn--outline">View All Dishes</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROMO BANNER ===================== -->
+    <section class="promo section" aria-label="Promotional offer">
+      <div class="container">
+        <div class="promo__card reveal">
+          <div class="promo__content">
+            <span class="promo__tag">Limited Time Offer 🔥</span>
+            <h2 class="promo__title">Get 30% OFF<br />Your First Order!</h2>
+            <p class="promo__desc">Use code <strong class="promo__code">FOODRUSH30</strong> at checkout. Valid for new users only. Min. order $20.</p>
+            <button class="btn btn--primary btn--lg promo__btn">Order Now & Save</button>
+          </div>
+          <div class="promo__visual" aria-hidden="true">
+            <div class="promo__emoji-stack">
+              <span class="promo__emoji promo__emoji--1">🍕</span>
+              <span class="promo__emoji promo__emoji--2">🍔</span>
+              <span class="promo__emoji promo__emoji--3">🍣</span>
+              <span class="promo__emoji promo__emoji--4">🌮</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HOW IT WORKS ===================== -->
+    <section class="how-it-works section" id="how-it-works" aria-label="How it works">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Simple Steps</span>
+          <h2 class="section-title">How It <span class="accent">Works</span></h2>
+          <p class="section-desc">Order your favorite food in just 3 easy steps — it couldn't be simpler.</p>
+        </div>
+
+        <div class="steps">
+          <article class="step reveal" aria-label="Step 1: Choose your food">
+            <div class="step__number" aria-hidden="true">01</div>
+            <div class="step__icon" aria-hidden="true">🔍</div>
+            <h3 class="step__title">Choose Your Food</h3>
+            <p class="step__desc">Browse hundreds of dishes from top-rated restaurants near you. Filter by cuisine, price, or delivery time.</p>
+          </article>
+
+          <div class="step__connector" aria-hidden="true">
+            <svg viewBox="0 0 80 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M0,12 Q20,2 40,12 Q60,22 80,12" stroke="#FF6B35" stroke-width="2" fill="none" stroke-dasharray="6,4"/>
+              <polygon points="76,8 80,12 76,16" fill="#FF6B35"/>
+            </svg>
+          </div>
+
+          <article class="step reveal" aria-label="Step 2: Place your order">
+            <div class="step__number" aria-hidden="true">02</div>
+            <div class="step__icon" aria-hidden="true">🛒</div>
+            <h3 class="step__title">Place Your Order</h3>
+            <p class="step__desc">Add items to cart, customize your meal to perfection, and check out securely in seconds.</p>
+          </article>
+
+          <div class="step__connector" aria-hidden="true">
+            <svg viewBox="0 0 80 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M0,12 Q20,2 40,12 Q60,22 80,12" stroke="#FF6B35" stroke-width="2" fill="none" stroke-dasharray="6,4"/>
+              <polygon points="76,8 80,12 76,16" fill="#FF6B35"/>
+            </svg>
+          </div>
+
+          <article class="step reveal" aria-label="Step 3: Fast delivery">
+            <div class="step__number" aria-hidden="true">03</div>
+            <div class="step__icon" aria-hidden="true">🚀</div>
+            <h3 class="step__title">Fast Delivery</h3>
+            <p class="step__desc">Sit back and relax! Your hot, fresh food will arrive at your door in 30 minutes or less.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== APP DOWNLOAD ===================== -->
+    <section class="app-cta section" aria-label="Download the app">
+      <div class="container">
+        <div class="app-cta__inner reveal">
+          <div class="app-cta__content">
+            <span class="section-tag">Mobile App</span>
+            <h2 class="app-cta__title">Order Smarter<br /><span class="accent">with Our App</span></h2>
+            <p class="app-cta__desc">Track your order in real-time, save your favorites, unlock exclusive deals, and reorder with one tap. The best food delivery experience is in your pocket.</p>
+            <ul class="app-cta__features" aria-label="App features">
+              <li class="app-cta__feature">✅ Live order tracking</li>
+              <li class="app-cta__feature">✅ Exclusive app-only deals</li>
+              <li class="app-cta__feature">✅ One-tap reorder</li>
+              <li class="app-cta__feature">✅ Multiple payment options</li>
+            </ul>
+            <div class="app-cta__buttons">
+              <a href="#" class="app-store-btn" aria-label="Download on App Store">
+                <span class="app-store-btn__icon" aria-hidden="true">🍎</span>
+                <div class="app-store-btn__text">
+                  <small>Download on the</small>
+                  <strong>App Store</strong>
+                </div>
+              </a>
+              <a href="#" class="app-store-btn" aria-label="Get it on Google Play">
+                <span class="app-store-btn__icon" aria-hidden="true">▶</span>
+                <div class="app-store-btn__text">
+                  <small>Get it on</small>
+                  <strong>Google Play</strong>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="app-cta__phone" aria-hidden="true">
+            <div class="phone-mockup">
+              <div class="phone-mockup__screen">
+                <div class="phone-mockup__notch"></div>
+                <div class="phone-mockup__app">
+                  <div class="phone-app__header">
+                    <span>🍕 FoodRush</span>
+                    <span>🛒</span>
+                  </div>
+                  <div class="phone-app__hero">
+                    <span>🍔</span>
+                    <p>Classic Burger</p>
+                    <strong>$12.99</strong>
+                  </div>
+                  <div class="phone-app__chips">
+                    <span class="phone-chip phone-chip--active">Pizza</span>
+                    <span class="phone-chip">Sushi</span>
+                    <span class="phone-chip">Tacos</span>
+                  </div>
+                  <div class="phone-app__cards">
+                    <div class="phone-mini-card">
+                      <span>🍕</span>
+                      <p>Margherita</p>
+                      <strong>$14.99</strong>
+                    </div>
+                    <div class="phone-mini-card">
+                      <span>🍜</span>
+                      <p>Ramen Bowl</p>
+                      <strong>$16.99</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TESTIMONIALS ===================== -->
+    <section class="testimonials section" id="testimonials" aria-label="Customer testimonials">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">What People Say</span>
+          <h2 class="section-title">Loved by <span class="accent">Thousands</span></h2>
+          <p class="section-desc">Don't just take our word for it — here's what our customers have to say.</p>
+        </div>
+
+        <div class="testimonials__slider reveal" id="testimonialSlider" role="list">
+
+          <article class="testimonial-card" role="listitem" aria-label="Review by Sarah M.">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="testimonial-card__text">
+              "Absolutely love FoodRush! The delivery is always on time and the food arrives hot. My go-to for Friday night dinners. The app is super intuitive too!"
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">SM</div>
+              <div class="testimonial-card__info">
+                <strong class="testimonial-card__name">Sarah Mitchell</strong>
+                <span class="testimonial-card__location">New York, USA</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card" role="listitem" aria-label="Review by James K.">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="testimonial-card__text">
+              "Best food delivery app I've used. The variety is incredible and the prices are fair. That 30% off first order deal sealed the deal for me. 10/10!"
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" style="background: #4ECDC4;" aria-hidden="true">JK</div>
+              <div class="testimonial-card__info">
+                <strong class="testimonial-card__name">James Kowalski</strong>
+                <span class="testimonial-card__location">Chicago, USA</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card" role="listitem" aria-label="Review by Priya S.">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote class="testimonial-card__text">
+              "Finally a delivery service that actually gets the order right every time! The real-time tracking is a game-changer. I recommend FoodRush to everyone."
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" style="background: #A855F7;" aria-hidden="true">PS</div>
+              <div class="testimonial-card__info">
+                <strong class="testimonial-card__name">Priya Sharma</strong>
+                <span class="testimonial-card__location">Los Angeles, USA</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Slider Controls -->
+        <div class="testimonials__controls reveal" aria-label="Testimonial navigation">
+          <button class="slider-btn" id="sliderPrev" aria-label="Previous testimonial">←</button>
+          <div class="slider-dots" id="sliderDots" role="tablist" aria-label="Testimonial indicators">
+            <button class="slider-dot slider-dot--active" role="tab" aria-selected="true" aria-label="Testimonial 1"></button>
+            <button class="slider-dot" role="tab" aria-selected="false" aria-label="Testimonial 2"></button>
+            <button class="slider-dot" role="tab" aria-selected="false" aria-label="Testimonial 3"></button>
+          </div>
+          <button class="slider-btn" id="sliderNext" aria-label="Next testimonial">→</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== NEWSLETTER ===================== -->
+    <section class="newsletter section" aria-label="Newsletter signup">
+      <div class="container">
+        <div class="newsletter__card reveal">
+          <div class="newsletter__content">
+            <h2 class="newsletter__title">Get Exclusive Deals<br />in Your Inbox 📩</h2>
+            <p class="newsletter__desc">Subscribe and be the first to hear about new restaurants, seasonal specials, and members-only discounts.</p>
+          </div>
+          <form class="newsletter__form" novalidate aria-label="Newsletter signup form">
+            <div class="newsletter__input-group">
+              <label for="newsletterEmail" class="visually-hidden">Email address</label>
+              <input class="newsletter__input" type="email" id="newsletterEmail" placeholder="Enter your email address..." aria-label="Email address" required />
+              <button class="btn btn--primary newsletter__btn" type="submit">Subscribe</button>
+            </div>
+            <p class="newsletter__privacy">🔒 No spam, ever. Unsubscribe anytime.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+
+        <!-- Brand -->
+        <div class="footer__brand">
+          <a href="#" class="navbar__logo footer__logo" aria-label="FoodRush Home">
+            <span class="navbar__logo-icon" aria-hidden="true">🍕</span>
+            <span class="navbar__logo-text">Food<span class="navbar__logo-accent">Rush</span></span>
+          </a>
+          <p class="footer__brand-desc">Your favorite food, delivered fast. Fresh meals from the best local restaurants straight to your door.</p>
+          <div class="footer__social" aria-label="Social media links">
+            <a href="#" class="footer__social-link" aria-label="Follow us on Facebook">f</a>
+            <a href="#" class="footer__social-link" aria-label="Follow us on Twitter">𝕏</a>
+            <a href="#" class="footer__social-link" aria-label="Follow us on Instagram">◉</a>
+            <a href="#" class="footer__social-link" aria-label="Follow us on TikTok">♪</a>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <nav class="footer__links" aria-label="Company links">
+          <h4 class="footer__heading">Company</h4>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">About Us</a></li>
+            <li><a href="#" class="footer__link">Careers</a></li>
+            <li><a href="#" class="footer__link">Press</a></li>
+            <li><a href="#" class="footer__link">Blog</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer__links" aria-label="Support links">
+          <h4 class="footer__heading">Support</h4>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Help Centre</a></li>
+            <li><a href="#" class="footer__link">Contact Us</a></li>
+            <li><a href="#" class="footer__link">Privacy Policy</a></li>
+            <li><a href="#" class="footer__link">Terms of Service</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer__links" aria-label="Restaurant partner links">
+          <h4 class="footer__heading">For Restaurants</h4>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Partner With Us</a></li>
+            <li><a href="#" class="footer__link">Restaurant Portal</a></li>
+            <li><a href="#" class="footer__link">Delivery Driver</a></li>
+            <li><a href="#" class="footer__link">Advertise</a></li>
+          </ul>
+        </nav>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2024 FoodRush. All rights reserved. Made with ❤️</p>
+        <div class="footer__payments" aria-label="Accepted payment methods">
+          <span class="footer__payment-badge" aria-label="Visa">VISA</span>
+          <span class="footer__payment-badge" aria-label="Mastercard">MC</span>
+          <span class="footer__payment-badge" aria-label="PayPal">PP</span>
+          <span class="footer__payment-badge" aria-label="Apple Pay">AP</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== CART DRAWER ===================== -->
+  <div class="cart-overlay" id="cartOverlay" aria-hidden="true"></div>
+  <aside class="cart-drawer" id="cartDrawer" role="complementary" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-drawer__header">
+      <h2 class="cart-drawer__title">Your Cart 🛒</h2>
+      <button class="cart-drawer__close" id="cartClose" aria-label="Close cart">✕</button>
+    </div>
+
+    <div class="cart-drawer__body" id="cartBody">
+      <!-- Cart items rendered by JS -->
+      <div class="cart-empty" id="cartEmpty">
+        <span class="cart-empty__icon" aria-hidden="true">🛒</span>
+        <p class="cart-empty__text">Your cart is empty</p>
+        <p class="cart-empty__sub">Add some delicious food!</p>
+      </div>
+    </div>
+
+    <div class="cart-drawer__footer" id="cartFooter" style="display:none">
+      <div class="cart-summary">
+        <div class="cart-summary__row">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">$0.00</span>
+        </div>
+        <div class="cart-summary__row">
+          <span>Delivery Fee</span>
+          <span>$2.99</span>
+        </div>
+        <div class="cart-summary__row cart-summary__row--total">
+          <span>Total</span>
+          <span id="cartTotal">$0.00</span>
+        </div>
+      </div>
+      <button class="btn btn--primary btn--full btn--lg">Proceed to Checkout</button>
+    </div>
+  </aside>
+
+  <!-- ===================== TOAST ===================== -->
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- ===================== SCROLL TO TOP ===================== -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
